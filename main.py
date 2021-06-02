@@ -12,8 +12,10 @@ async def on_ready():
     print('bot is online')
 
 
-
-
+@client.command(aliases=['Salut', 'SALUT'])
+async def salut(ctx):
+    print(f'Utilizatorul {ctx.author.nick} a folosit comanda "salut".')
+    await ctx.send(f'Salut, {ctx.author.mention}, have nice day')
 
 
 client.run(TOKEN)
